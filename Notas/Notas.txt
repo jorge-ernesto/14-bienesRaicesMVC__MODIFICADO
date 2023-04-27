@@ -1,0 +1,50 @@
+Notas
+
+---- Proyecto modificado ----
+
+- Eliminamos Gulp.js
+- Actualizamos Composer
+- Para verificar los cambios realizados en el proyecto modificado y ya que todo el repositorio usa Git, se puede copiar el contenido del proyecto sin modificar al proyecto modificado
+
+---- Gulp.js ----
+
+- Eliminamos carpetas "src" y "build", "build" es la carpeta generada por Gulp.js
+- Creamos carpeta "assets" con los archivos correctos
+- Modificamos referencias en HTML de "build" a "assets"
+
+---- Composer ----
+
+- Agregamos ".gitignore"
+- Eliminamos archivo "composer.lock"
+- Eliminamos carpeta "vendor"
+- Ejecutamos "composer install"
+
+---- Host Virtual en Laragon ---- 
+
+- Para configurar un Host Virtual en Laragon debemos realizar:
+    - Revisar archivo "httpd.conf"                                                       ubicado en ----> D:\PORTABLES\laragon\bin\apache\httpd-2.4.54-win64-VS16\conf
+    - Revisar carpeta "sites_enabled" (Aca estan los archivos autogenerados por Laragon) ubicado en ----> D:\PORTABLES\laragon\etc\apache2\sites-enabled
+    - Revisar archivo "HOSTS"                                                            ubicado en ----> C:\Windows\System32\drivers\etc
+    - Crear archivo "NOMBRE.test.conf" en la carpeta "sites_enabled"
+    - Agregar el host virtual en el archivo "HOSTS"
+
+        Ejemplo de como agregar el host virtual en el archivo "HOSTS"
+        127.0.0.1      NOMBRE.test        #laragon magic!
+
+- Notas
+    Utilizar un host virtual (también conocido como VPS, por sus siglas en inglés) puede ser una forma de emular el funcionamiento de un hosting real.
+    Un VPS es un servidor virtualizado que se ejecuta en un servidor físico compartido con otros VPS.
+    Cada VPS tiene su propio sistema operativo, su propio espacio en disco y su propia capacidad de procesamiento y memoria, lo que lo hace similar a un servidor dedicado.
+    Al utilizar un VPS, puedes instalar y configurar tus propias aplicaciones y servicios web, y gestionarlos de manera similar a como lo harías en un servidor dedicado o en un hosting compartido.
+    Además, como tienes acceso de root a tu VPS, puedes personalizarlo según tus necesidades y ajustar su rendimiento y seguridad.
+
+---- Servidor Web de Desarrollo con PHP ----
+
+- Para levantar un Servidor Web de Desarrollo con PHP debemos realizar:
+    - En consola ir a la carpeta "public" dentro del proyecto
+    - Ejecutar "php -S localhost:8000"
+
+- Notas
+    La línea de código "php -S localhost:8000" es simplemente un comando para ejecutar un servidor web de desarrollo en tu máquina local utilizando PHP.
+    Este servidor web se ejecuta en un solo hilo de ejecución y solo puede manejar una solicitud a la vez.
+    Además, no está diseñado para manejar una carga de tráfico en vivo y no proporciona las mismas características de seguridad y escalabilidad que un servidor web en vivo.

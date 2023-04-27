@@ -1,0 +1,5 @@
+# Recursos
+# https://www.udemy.com/course/aprende-a-publicar-sitios-web-en-internet-hosting-vps/learn/lecture/24511012?start=61#notes
+
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]

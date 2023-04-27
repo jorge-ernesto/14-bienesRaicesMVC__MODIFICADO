@@ -1,0 +1,8 @@
+# Recursos
+# https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql/learn/lecture/30767218?start=133#notes
+# https://gist.github.com/codigoconjuan/1fe819b8774894c1ac9ae8d3cc35f0c5
+
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]
